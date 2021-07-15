@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Contoso University</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/js/font-awesome.min.js">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-blue border-bottom box-shadow mb-3">
+            <div class="container">
+
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">
+                    <h3>Contoso University</h3>
+                </a>
+
+
+
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">University</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Students" asp-action="Index">Students</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Courses" asp-action="Index">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Instructors" asp-action="Index">Instructors </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Departments" asp-action="Index">Departments</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="site-header">
+            <div class="container">
+                <h1 class="site-name">Contoso University </h1>
+            </div>
+        </div>
+
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+    <div class="container-fluid bg-blue text-light mt-16 p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 d-flex flex-column">
+                    <h3>Contact</h3>
+                    <a href="#" class="text-light mt-1">
+                        <span class="text-light">
+
+                        </span>
+                        <i class="fas fa-building"></i>
+                        1742 Fillmore ST,CA, 94115
+                    </a>
+                    <a href="#" class="text-light mt-1">
+                        <span>
+                            <i class="fas fa-address-book"></i>
+                        </span>
+                        Text: (208)-496-1411
+                    </a>
+                    <a href="#" class="text-light mt-1">
+                        <span>
+
+                        </span>
+                        ask@contoso.edu
+                    </a>
+                </div>
+                <div class="col-md-3 d-flex flex-column">
+                    <h4>Follow</h4>
+                    <a href="#" class="text-light mt-1">
+                        <span>
+
+                        </span>
+                        Facebook
+                    </a>
+                    <a href="#" class="text-light mt-1">
+                        <span>
+
+                        </span>
+                        Instagram
+                    </a>
+                    <a href="#" class="text-light mt-1">
+                        <span>
+
+                        </span>
+                        Linkedin
+                    </a>
+                </div>
+                <div class="col-md-3 d-flex flex-column">
+                    <h4>Popular</h4>
+                    <a href="#" class="text-light mt-1">
+                        <span>
+
+                        </span>
+                        Id Card
+                    </a>
+                    <a href="#" class="text-light mt-1">
+                        <span>
+
+                        </span>
+                        Jobs and Employment
+                    </a>
+                    <a href="#" class="text-light mt-1">
+                        <span>
+
+                        </span>
+                        Ward and Stakes
+                    </a>
+                </div>
+                <div class="col-md-3 d-flex flex-column">
+                    <h4> Help</h4>
+                    <a href="#" class="text-light mt-1">
+                        <span>
+
+                        </span>
+                        Disability Service
+                    </a>
+                    <a href="#" class="text-light mt-1">
+                        <span>
+
+                        </span>
+                        One Stop Help
+                    </a>
+                    <a href="#" class="text-light mt-1">
+                        <span>
+
+                        </span>
+                        Campus Map
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="border-top footer text-muted bg-black-v1">
+
+        <div class="container text-light">
+            &copy; 2021 - ContosoUniversity - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
